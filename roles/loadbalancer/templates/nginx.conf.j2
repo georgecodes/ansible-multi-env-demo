@@ -1,0 +1,21 @@
+events {
+  worker_connections  4096;  ## Default: 1024 
+}
+
+
+http {    
+
+    upstream myapp1 {
+        {% for host in groups['webservers'] %}
+        server {{  hostvars[host].ansible_all_ipv4_addresses[1] }};
+        {% endfor %}
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://myapp1;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+---
+#
+- yum_repository:
+    name: local
+    description: Local packages
+    baseurl: http://10.0.2.2:9999/rpms
+    gpgcheck: no
+  sudo: true
+  sudo_user: root

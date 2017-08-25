@@ -1,0 +1,11 @@
+---
+#
+- name: load balancers
+  hosts: loadbalancers
+  remote_user: vagrant
+  sudo: yes
+
+  roles:
+    - role: common
+    - role: loadbalancer
+    

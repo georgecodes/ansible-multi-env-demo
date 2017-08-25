@@ -1,0 +1,20 @@
+---
+#
+
+- name: load-balancer-dev
+  ip: 192.168.50.10
+
+- name: web-one-dev
+  ip: 192.168.50.11
+
+- name: web-two-dev
+  ip: 192.168.50.12
+
+- name: load-balancer-prod
+  ip: 192.168.60.10
+
+- name: web-one-prod
+  ip: 192.168.60.11
+
+- name: web-two-prod
+  ip: 192.168.60.12

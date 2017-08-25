@@ -1,0 +1,15 @@
+---
+#
+- name: install nginx
+  package:
+    name: nginx
+    enablerepo: local
+    disablerepo: "*"
+  sudo: true
+  sudo_user: root
+
+- name: put front page in
+  template:
+    src: index.html.j2
+    dest: /usr/share/nginx/html/index.html
+  notify: restart nginx

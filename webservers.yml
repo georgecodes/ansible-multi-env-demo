@@ -1,0 +1,11 @@
+---
+#
+- name: Webservers
+  hosts: webservers
+  remote_user: vagrant
+  sudo: yes
+
+  roles:
+    - role: common
+    - role: webserver
+    
