@@ -18,3 +18,6 @@
 
 - name: web-two-prod
   ip: 192.168.60.12
+
+- name: web-three-prod
+  ip: 192.168.60.13

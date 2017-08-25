@@ -7,6 +7,7 @@
 [webservers]
 192.168.60.11
 192.168.60.12
+192.168.60.13
 
 [production:children]
 local
